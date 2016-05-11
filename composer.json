@@ -10,7 +10,8 @@
         "laravelcollective/html": "5.2.*",
         "barryvdh/laravel-debugbar": "^2.2",
         "davejamesmiller/laravel-breadcrumbs": "^3.0",
-        "laravelista/ekko": "~1.2"
+        "laravelista/ekko": "~1.2",
+        "bican/roles": "2.1.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

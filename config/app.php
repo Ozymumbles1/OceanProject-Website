@@ -147,11 +147,13 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
 
         Barryvdh\Debugbar\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
         Laravelista\Ekko\EkkoServiceProvider::class,
+        Bican\Roles\RolesServiceProvider::class,
 
         /*
          * Application Service Providers...
