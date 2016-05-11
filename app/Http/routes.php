@@ -29,8 +29,8 @@ Route::group(['prefix' => 'panel', 'as' => 'panel'], function () {
 		Route::post('password/email', ['as' => '.password.email', 'uses' => 'Auth\PasswordController@sendResetLinkEmail']);
 		Route::post('password/reset', ['as' => '.password.reset', 'uses' => 'Auth\PasswordController@reset']);
 
-		Route::get('profile', ['as' => '.profile', 'uses' => 'Auth\AuthController@showUpdateForm']);
-		Route::put('profile', ['as' => '.profile', 'uses' => 'Auth\AuthController@update']);
+		Route::get('profile', ['as' => '.profile', 'uses' => 'Auth\AuthController@showUpdateForm'])->middleware('auth');
+		Route::put('profile', ['as' => '.profile', 'uses' => 'Auth\AuthController@update'])->middleware('auth');
 
 	});
 
