@@ -116,66 +116,12 @@
 							<li class="has-submenu">
 								<a href="{{ route('panel') }}"><i class="md md-dashboard"></i>Dashboard</a>
 							</li>
-							<li class="has-submenu">
-								<a href="#"><i class="md md-color-lens"></i>Example</a>
-								<ul class="submenu">
-									<li><a href="#">Example1</a></li>
-									<li><a href="#">Example2</a></li>
-									<li><a href="#">Example3</a></li>
-									<li><a href="#">Example4</a></li>
-									<li><a href="#">Example5</a></li>
-								</ul>
-							</li>
-
-							<li class="has-submenu">
-								<a href="#"><i class="md md-color-lens"></i>Example</a>
-								<ul class="submenu">
-									<li><a href="#">Example1</a></li>
-									<li><a href="#">Example2</a></li>
-									<li><a href="#">Example3</a></li>
-									<li><a href="#">Example4</a></li>
-									<li><a href="#">Example5</a></li>
-								</ul>
-							</li>
-
-							<li class="has-submenu">
-								<a href="#"><i class="md md-color-lens"></i>Example</a>
-								<ul class="submenu">
-									<li><a href="#">Example1</a></li>
-									<li><a href="#">Example2</a></li>
-									<li><a href="#">Example3</a></li>
-									<li><a href="#">Example4</a></li>
-									<li><a href="#">Example5</a></li>
-								</ul>
-							</li>
-
-							<li class="has-submenu">
-								<a href="#"><i class="md md-color-lens"></i>Example</a>
-								<ul class="submenu">
-									<li><a href="#">Example1</a></li>
-									<li><a href="#">Example2</a></li>
-									<li><a href="#">Example3</a></li>
-									<li><a href="#">Example4</a></li>
-									<li><a href="#">Example5</a></li>
-								</ul>
-							</li>
-
-							<li class="has-submenu">
-								<a href="#"><i class="md md-color-lens"></i>Example</a>
-								<ul class="submenu">
-									<li><a href="#">Example1</a></li>
-									<li><a href="#">Example2</a></li>
-									<li><a href="#">Example3</a></li>
-									<li><a href="#">Example4</a></li>
-									<li><a href="#">Example5</a></li>
-								</ul>
-							</li>
 
 							@role('admin')
 							<li class="has-submenu">
-								<a href="#"><i class="md md-color-lens"></i>Admin</a>
+								<a href="#"><i class="md md-color-lens"></i>Senior Helper</a>
 								<ul class="submenu">
-									<li><a href="{{ route('panel.admin.users') }}">Users</a></li>
+									<li><a href="{{ route('panel.seniorhelper.users') }}">Users</a></li>
 									<li><a href="#">Example2</a></li>
 									<li><a href="#">Example3</a></li>
 									<li><a href="#">Example4</a></li>
@@ -207,6 +153,15 @@
 		</footer>
 
 		<script src="{{ elixir("js/app.js") }}"></script>
+		@if (count($errors) > 0)
+			<script src="/build/plugins/notifyjs/dist/notify.min.js"></script>
+			<script src="/build/plugins/notifications/notify-metro.js"></script>
+			<script type="text/javascript">
+			@foreach ($errors->all() as $error)
+				$.Notification.autoHideNotify('error', 'top right', 'An error occurred', '{{ $error }}');
+			@endforeach
+			</script>
+		@endif
 		@yield('footer')
 	</body>
 </html>

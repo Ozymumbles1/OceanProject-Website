@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\SeniorHelper;
 
 use DB;
 use App\Models\User;
@@ -13,9 +13,9 @@ class UserController extends Controller {
 
 	public function showUsers() {
 
-		$users = DB::table('users')->paginate(2);
+		$users = DB::table('users')->paginate(25);
 
-		return view('admin.users')
+		return view('seniorhelper.users')
 			->withUsers($users);
 
 	}
