@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\SeniorHelper;
+namespace App\Http\Controllers\Support;
 
 use DB;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Pagination\Paginator;
-use Illuminate\Pagination\LengthAwarePaginator;
 
 class UserController extends Controller {
 
@@ -15,7 +13,7 @@ class UserController extends Controller {
 
 		$users = DB::table('users')->paginate(25);
 
-		return view('seniorhelper.users')
+		return view('support.users')
 			->withUsers($users);
 
 	}

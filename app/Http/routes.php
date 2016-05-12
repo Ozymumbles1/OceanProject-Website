@@ -34,9 +34,9 @@ Route::group(['prefix' => 'panel', 'as' => 'panel'], function () {
 
 	});
 
-	Route::group(['prefix' => 'seniorhelper', 'middleware' => ['level:5'], 'as' => '.seniorhelper'], function() {
+	Route::group(['prefix' => 'support', 'middleware' => ['level:5'], 'as' => '.support'], function() {
 
-		Route::get('users', ['as' => '.users', 'uses' => 'SeniorHelper\UserController@showUsers']);
+		Route::get('users', ['as' => '.users', 'uses' => 'Support\UserController@showUsers']);
 
 	});
 

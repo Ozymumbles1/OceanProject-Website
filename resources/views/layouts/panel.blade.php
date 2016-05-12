@@ -117,18 +117,18 @@
 								<a href="{{ route('panel') }}"><i class="md md-dashboard"></i>Dashboard</a>
 							</li>
 
-							@role('admin')
+							@level(5)
 							<li class="has-submenu">
-								<a href="#"><i class="md md-color-lens"></i>Senior Helper</a>
+								<a href="#"><i class="md md-color-lens"></i>Support</a>
 								<ul class="submenu">
-									<li><a href="{{ route('panel.seniorhelper.users') }}">Users</a></li>
+									<li><a href="{{ route('panel.support.users') }}">Users</a></li>
 									<li><a href="#">Example2</a></li>
 									<li><a href="#">Example3</a></li>
 									<li><a href="#">Example4</a></li>
 									<li><a href="#">Example5</a></li>
 								</ul>
 							</li>
-							@endrole
+							@endlevel
 
 						</ul>
 					</div>
