@@ -34,6 +34,13 @@ Route::group(['prefix' => 'panel', 'as' => 'panel'], function () {
 
 	});
 
+	Route::group(['prefix' => 'admin', 'as' => '.admin'], function() {
+
+		Route::get('users', ['as' => '.users', 'uses' => 'Admin\UserController@showUsers'])
+			->middleware('role:admin');
+
+	});
+
 });
 
 Route::get('/', function () {

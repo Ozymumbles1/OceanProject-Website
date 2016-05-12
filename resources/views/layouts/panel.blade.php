@@ -171,16 +171,19 @@
 								</ul>
 							</li>
 
+							@role('admin')
 							<li class="has-submenu">
-								<a href="#"><i class="md md-color-lens"></i>Example</a>
+								<a href="#"><i class="md md-color-lens"></i>Admin</a>
 								<ul class="submenu">
-									<li><a href="#">Example1</a></li>
+									<li><a href="{{ route('panel.admin.users') }}">Users</a></li>
 									<li><a href="#">Example2</a></li>
 									<li><a href="#">Example3</a></li>
 									<li><a href="#">Example4</a></li>
 									<li><a href="#">Example5</a></li>
 								</ul>
 							</li>
+							@endrole
+
 						</ul>
 					</div>
 				</div>
