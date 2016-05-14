@@ -119,7 +119,7 @@
 
 							@level(5)
 							<li class="has-submenu">
-								<a href="#"><i class="md md-color-lens"></i>Support</a>
+								<a href="#"><i class="md md-help"></i>Support</a>
 								<ul class="submenu">
 									<li><a href="{{ route('panel.support.users') }}">Users</a></li>
 									<li><a href="#">Example2</a></li>
@@ -153,13 +153,18 @@
 		</footer>
 
 		<script src="{{ elixir("js/app.js") }}"></script>
+		<script src="/build/plugins/notifyjs/dist/notify.min.js"></script>
+		<script src="/build/plugins/notifications/notify-metro.js"></script>
 		@if (count($errors) > 0)
-			<script src="/build/plugins/notifyjs/dist/notify.min.js"></script>
-			<script src="/build/plugins/notifications/notify-metro.js"></script>
 			<script type="text/javascript">
 			@foreach ($errors->all() as $error)
 				$.Notification.autoHideNotify('error', 'top right', 'An error occurred', '{{ $error }}');
 			@endforeach
+			</script>
+		@endif
+		@if (Session::get('success'))
+			<script type="text/javascript">
+				$.Notification.autoHideNotify('success', 'top right', 'Success', '{{ (Session::get("success")) }}');
 			</script>
 		@endif
 		@yield('footer')

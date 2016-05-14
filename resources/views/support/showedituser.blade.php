@@ -3,13 +3,18 @@
 @section('content')
 <div class="row">
 	<div class="col-sm-offset-2 col-sm-8">
-		<h4 class="page-title">Profile</h4>
+		<h4 class="page-title">User's Profile</h4>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-offset-2 col-sm-8">
 		<div class="card-box">
 			<div class="row">
-				<h4 class="m-t-0 header-title"><b>Edit Profile</b></h4>
-				<p class="text-muted m-b-30 font-13">You can edit your information via this page</p>
+				<h4 class="m-t-0 header-title"><b>Edit User's Profile</b></h4>
+				<p class="text-muted m-b-30 font-13">You can edit the user's information via this page</p>
 
-				<form class="form-horizontal" role="form" action="{{ route('panel.user.profile') }}" method="POST">
+				<form class="form-horizontal" role="form" action="{{ route('panel.support.edituser', $user->id) }}" method="POST">
 					<input name="_method" type="hidden" value="PUT">
 					{!! csrf_field() !!}
 
@@ -42,28 +47,6 @@
 							@if ($errors->has('email'))
 								<ul class="parsley-errors-list filled">
 									<li class="parsley-required">{{ $errors->first('email') }}</li>
-								</ul>
-							@endif
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="old_password" class="col-sm-2 control-label">Old Password</label>
-						<div class="col-sm-9">
-							<input type="password" class="form-control{{ $errors->has('old_password') ? ' parsley-error' : '' }}" id="old_password" name="old_password">
-							@if ($errors->has('old_password'))
-								<ul class="parsley-errors-list filled">
-									<li class="parsley-required">{{ $errors->first('old_password') }}</li>
-								</ul>
-							@endif
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="new_password" class="col-sm-2 control-label">New Password</label>
-						<div class="col-sm-9">
-							<input type="password" class="form-control{{ $errors->has('new_password') ? ' parsley-error' : '' }}" id="new_password" name="new_password">
-							@if ($errors->has('new_password'))
-								<ul class="parsley-errors-list filled">
-									<li class="parsley-required">{{ $errors->first('new_password') }}</li>
 								</ul>
 							@endif
 						</div>

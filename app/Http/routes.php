@@ -38,6 +38,20 @@ Route::group(['prefix' => 'panel', 'as' => 'panel'], function () {
 
 		Route::get('users', ['as' => '.users', 'uses' => 'Support\UserController@showUsers']);
 
+		Route::get('edituser/{user}', ['as' => '.edituser', 'uses' => 'Support\UserController@showEditUser'])
+			->where('page', '([1-9]+)');
+		Route::put('edituser/{user}', ['as' => '.edituser', 'uses' => 'Support\UserController@editUser'])
+			->where('page', '([1-9]+)');
+
+	});
+
+	Route::group(['prefix' => 'admin', 'middleware' => ['role:admin'], 'as' => '.admin'], function() {
+
+		Route::get('edituserrole/{user}', ['as' => '.edituserrole', 'uses' => 'Admin\UserController@showEditUserRole'])
+			->where('page', '([1-9]+)');
+		Route::put('edituserrole/{user}', ['as' => '.edituserrole', 'uses' => 'Admin\UserController@editUserRole'])
+			->where('page', '([1-9]+)');
+
 	});
 
 });

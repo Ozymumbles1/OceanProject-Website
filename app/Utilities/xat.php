@@ -17,7 +17,7 @@ trait xat
 	}
 
 	public static function isValidRegname($regname) {
-		return (strlen($regname) >= 4);
+		return (strlen($regname) >= 3);
 	}
 
 	public static function isRegnameExist($regname) {
