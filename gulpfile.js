@@ -4,7 +4,7 @@ elixir(function(mix) {
     mix
     	.styles([
     		'./resources/assets/css/bootstrap.min.css',
-            './resources/assets/plugins/multiselect/css/multi-select.css',
+            	'./resources/assets/plugins/multiselect/css/multi-select.css',
     		'./resources/assets/css/core.css',
     		'./resources/assets/css/components.css',
     		'./resources/assets/css/icons.css',
@@ -23,7 +23,7 @@ elixir(function(mix) {
     		'./resources/assets/js/wow.min.js',
     		'./resources/assets/js/jquery.nicescroll.js',
     		'./resources/assets/js/jquery.scrollTo.min.js',
-            './resources/assets/plugins/multiselect/js/jquery.multi-select.js',
+            	'./resources/assets/plugins/multiselect/js/jquery.multi-select.js',
     		'./resources/assets/js/jquery.core.js',
     		'./resources/assets/js/jquery.app.js'
     	], 'public/js/app.js')
