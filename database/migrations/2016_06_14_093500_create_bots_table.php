@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Bots extends Migration
+class CreateBotsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -42,11 +42,11 @@ class Bots extends Migration
             $table->string('powerdisabled', 500);
             $table->string('automessage')->nullable();
             $table->integer('automessagetime')->nullable();
-            $table->bool('tooglelinkfilter')->default('0');
-            $table->bool('tooglefilterlinkaction')->default('0');
-            $table->bool('toogleyoutubemessage')->default('0');
-            $table->bool('tooglelogs')->default('1');
-            $table->bool('autorestart')->default('0');
+            $table->boolean('tooglelinkfilter')->default('0');
+            $table->boolean('tooglefilterlinkaction')->default('0');
+            $table->boolean('toogleyoutubemessage')->default('0');
+            $table->boolean('tooglelogs')->default('1');
+            $table->boolean('autorestart')->default('0');
             $table->integer('automember_id')->default(1);
             $table->integer('creator_user_id')->index();
             $table->timestamps();
