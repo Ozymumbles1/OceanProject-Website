@@ -25,10 +25,6 @@ File: Menu
     margin: 0px auto;
     text-align: center;
   }
-
-  i {
-    color: @primary;
-  }
 }
 #topnav {
   position: fixed;
@@ -59,7 +55,7 @@ File: Menu
     }
   }
   .topbar-main {
-    background-color: darken(@dark,8%);
+    background-color: @primary;
 
     .badge {
       position: absolute;
@@ -169,7 +165,7 @@ File: Menu
     color: @white;
     padding-left: 20px;
     padding-right: 40px;
-    background: fade(@white, 10%);
+    background: fade(@white, 20%);
     box-shadow: none;
     border-radius: 30px;
     height: 30px;
@@ -263,7 +259,6 @@ File: Menu
 
   .navbar-custom {
     background-color: darken(@dark,5%);
-    box-shadow: 0 1px 3px fade(@white,20%);
   }
 
   .navbar-toggle {

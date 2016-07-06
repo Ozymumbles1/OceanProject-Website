@@ -22,9 +22,6 @@ File: Menu
   margin: 0px auto;
   text-align: center;
 }
-.logo i {
-  color: #3bafda;
-}
 #topnav {
   position: fixed;
   right: 0;
@@ -47,7 +44,7 @@ File: Menu
   color: #3bafda;
 }
 #topnav .topbar-main {
-  background-color: #202532;
+  background-color: #3bafda;
 }
 #topnav .topbar-main .badge {
   position: absolute;
@@ -141,7 +138,7 @@ File: Menu
   color: #ffffff;
   padding-left: 20px;
   padding-right: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   box-shadow: none;
   border-radius: 30px;
   height: 30px;
@@ -226,7 +223,6 @@ File: Menu
 }
 #topnav .navbar-custom {
   background-color: #262c3b;
-  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.2);
 }
 #topnav .navbar-toggle {
   border: 0;

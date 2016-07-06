@@ -1,5 +1,5 @@
 /**
-* Theme: Ubold Admin Template
+* Theme: Minton Admin Template
 * Author: Coderthemes
 * Module/App: Main Js
 */

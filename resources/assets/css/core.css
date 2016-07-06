@@ -136,7 +136,6 @@ a:focus {
   -moz-border-radius: 5px;
   background-clip: padding-box;
   margin-bottom: 20px;
-  background-color: #262c3b;
 }
 .header-title {
   text-transform: uppercase;
@@ -313,16 +312,13 @@ pre {
   color: #3ddcf7;
 }
 .text-inverse {
-  color: #4c5667;
+  color: rgba(255, 255, 255, 0.6);
 }
 .text-pink {
   color: #f76397;
 }
 .text-purple {
   color: #7266ba;
-}
-.text-dark {
-  color: #797979 !important;
 }
 .form-control {
   background-color: #30384b;
@@ -1046,7 +1042,7 @@ button.list-group-item .list-group-item-heading {
 }
 /* Demo Only */
 .grid-structure .grid-container {
-  background-color: #30384b;
+  background-color: rgba(255, 255, 255, 0.03);
   margin-bottom: 10px;
   padding: 10px 20px;
 }
