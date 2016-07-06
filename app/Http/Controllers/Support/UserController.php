@@ -33,9 +33,9 @@ class UserController extends Controller {
 		$data = $request->all();
 
 		$rules = [
-			'email'        => 'email|max:100|unique:users',
-			'xatid'        => 'integer|unique:users',
-			'regname'      => 'max:50|unique:users',
+			'email'   => 'email|max:100|unique:users',
+			'xatid'   => 'integer|unique:users',
+			'regname' => 'max:50|unique:users',
 		];
 
 		$validator = Validator::make(
@@ -45,18 +45,18 @@ class UserController extends Controller {
 
 		$validator->after(function($validator) use ($data, $user) {
 
-			if(!empty($data['xatid'])) {
-				if(!xat::isValidXatID($data['xatid'])) {
+			if (!empty($data['xatid'])) {
+				if (!xat::isValidXatID($data['xatid'])) {
 					$validator->errors()->add('xatid', 'The xatid is not valid!');
-				} else if(!xat::isXatIDExist($data['xatid'])) {
+				} elseif (!xat::isXatIDExist($data['xatid'])) {
 					$validator->errors()->add('xatid', 'The xatid does not exist!');
 				}
 			}
 
-			if(!empty($data['regname'])) {
-				if(!xat::isValidRegname($data['regname'])) {
+			if (!empty($data['regname'])) {
+				if (!xat::isValidRegname($data['regname'])) {
 					$validator->errors()->add('regname', 'The regname is not valid!');
-				} else if(!xat::isRegnameExist($data['regname'])) {
+				} elseif (!xat::isRegnameExist($data['regname'])) {
 					$validator->errors()->add('regname', 'The regname does not exist!');
 				}
 			}
@@ -70,15 +70,15 @@ class UserController extends Controller {
 				->withInput();
 		}
 
-		if(!empty($data['regname'])) {
+		if (!empty($data['regname'])) {
 			$user->regname = $data['regname'];
 		}
 
-		if(!empty($data['xatid'])) {
+		if (!empty($data['xatid'])) {
 			$user->xatid = $data['xatid'];
 		}
 
-		if(!empty($data['email'])) {
+		if (!empty($data['email'])) {
 			$user->email = $data['email'];
 		}
 
